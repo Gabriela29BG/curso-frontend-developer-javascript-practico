@@ -1,3 +1,6 @@
+// declaramos las etiqetas que usaremos de html+
+
+// variale que se usara en javascript = docu.query (etiqeta, claseo id de html)
 const menuEmail = document.querySelector('.navbar-email');
 const menuHamIcon = document.querySelector('.menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
@@ -7,6 +10,12 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const productDetailContainer = document.querySelector('#productDetail');
 const cardsContainer = document.querySelector('.cards-container');
+
+
+// es un escuchador que indica al navegador que este atento a la interacción del usuario
+// Su sintaxis es muy sencilla:
+// target.addEventListener('tipo de evento',nombre de la función qe se ejectara);
+// Target, es elelemento que se escucha generalmente se identifica por su ID.
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
@@ -93,8 +102,7 @@ function renderProducts(arr) {
     const productInfoDiv = document.createElement('div');
   
     const productPrice = document.createElement('p');
-    productPrice.innerText = '$' + product.price;
-    const productName = document.createElement('p');
+    productPrice.innerText = '$' + product.price;    const productName = document.createElement('p');
     productName.innerText = product.name;
   
     productInfoDiv.appendChild(productPrice);
